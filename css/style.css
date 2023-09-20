@@ -4,52 +4,15 @@
 /*====== body =======*/
 
 body {
+ width:100%;
+ min-width: 340px;
+
 font-family: 'Noto Sans KR', sans-serif;
 font-size: 14px; line-height: 1.5; color:black;
 cursor:pointer;}
 
-
-.gnbBtns{
-  position:absolute;
-  border:1px solid #2F5586; 
-  width:50px;
-  height:50px;
-  border-radius: 50%;;
-
-}
-
-.BtnTrigger
-{position:relative;
- top:12px; left:10px;
-display: inline-block;
-width:30px; height:30px;
-}
-
-.BtnTrigger span{
-  position:absolute; 
-  width:30px; height:4px;
-  background: rgb(255, 255, 255);  
-}
-
-.BtnTrigger span:nth-child(1)
-{top:-3px;}
-.BtnTrigger span:nth-child(2)
-{top:calc(50% - 5px);}
-.BtnTrigger span:nth-child(3)
-{bottom:3px;}
-
-
-
-main{ width:100%; height:1800px; padding-top:96px;}
-
-
-button {background: transparent;}
-
-.ico_friends{ 
-  display:block; background:url('../img/icon_friends.png') no-repeat 0 0 / 700px 1000px; font-size:1px; color:transparent; line-height:1; }
-
-
-#container { 
+#container {
+  overflow:hidden; 
   border: 2px solid rgba(0,0,0,0.4); 
   width:636px;
   max-width:540px; 
@@ -57,51 +20,46 @@ button {background: transparent;}
   margin:auto; }
 
 
-
+main{ width:100%; height:2000px; padding-top:96px;}
 
 header{ 
-  position:fixed; top:0; left:0; right:0;
+  position:fixed; 
+  top:0; left:0; right:0;
   max-width:540px; min-width:320px; 
   margin:auto; height:60px; 
-  background: #fff; z-index:100;
+  background: #fff; z-index:200;
   border:1px solid rgba(0,0,0,0.4); 
 }
 
 
-
-h1 { }
-h1 a { display:block; width:167px; height:46px; margin:auto;} 
-h1 img { width:90px; margin:5px;}
-
-.top_left, .top_right {
+.header_left, .header_right, .header_center{
   position:absolute; top:6px;}
 
-
-.top_left { 
+.header_left { 
   background:#2F5586; 
   width:45px; 
   height:45px; 
   border-radius: 50%;
   left: 12px; }
 
-.top_left > i{ 
+.header_left > i{ 
   position:absolute;
-  font-size:30px; color:white;}
+  left:8px; top:8px; 
+  font-size:30px; color:rgb(255, 255, 255);
 
-header > .top_center > img { 
-  position: absolute;  
-  top:6px; left:40%; 
-  right:50%;
+}
+
+.header_center {  
+  right:44%;
   width:100px; }
 
-
-
-
-.top_right{ right: 12px;}
-.top_right img{ position:absolute; width:40px; 
-  top:-4px; left:-40px;}
-
-
+.header_right > i { 
+    position:absolute;
+    left:480px;
+    font-size:40px;
+     
+  }
+  
 
 
 
@@ -196,7 +154,7 @@ border-top:0;
 
 .apply { 
   position:relative;
-  top:420px;
+  top:50px;
   width:80%; 
   margin:5px auto;
   border-radius: 20px;
@@ -260,26 +218,41 @@ display:none;
 /*------ main button - 아이콘  ------*/
 
 
-.content {  width:80%; margin:20px auto; }
-.content > div { 
+.content {  
+width:80%; margin:20px auto;
+height:400px;
+padding:12px;}
+
+
+
+
+  .content > div { 
   position:relative;
   display:block;
   float:left;
   width:180px; height:180px;
- 
+
   margin:10px;
   border-radius: 30px;
   background: #eee;
   
 }
 
-  .content > div > span { display:none;}
+  .content > div > span { 
+    position:absolute;
+    top:50px; right:50px;
+    align-content: center;
+    display:none;}
  
   .content > div:hover { 
-    background:rgba(43, 43, 43, 0.7);
+    background:rgba(36, 35, 35, 0.8);
    }
-  .content > div:hover > span { 
-    color:white}
+  .content > div:hover  { 
+    color:white; 
+    z-index: 100;
+   
+    font-size:20px;
+    font-weight:700;}
   
   
   
@@ -317,7 +290,10 @@ display:none;
 
 
 
-
+.search_ad {
+  position:relative;
+  left:93px;
+}
 
 
 
@@ -326,7 +302,7 @@ display:none;
 .board {
   display:block;
   position:relative;
-  top:400px; 
+  top:50px; 
   height:250px;
   width:80%; 
   margin:20px auto;
@@ -365,8 +341,8 @@ display:none;
 
 .client{
   position:relative;
-  top:510px;
-  left:65px;
+  top:50px;
+  left:55px;
   border-radius:10px;
   border: 2px solid #ddd;
   width:200px;
@@ -408,174 +384,33 @@ display:none;
 /*------slider------*/
 .client > .visual > img { 
   position:absolute;
-  top:-20px;  
   left:185px;
-  width:295px;
+  width:210px;
   margin:20px;
 }
 
 
 /*------ footer ------*/
 
-footer{
+footer {
   position:relative;
-  bottom:-500px;  
-  margin:40px;;
+  bottom:-100px;  
+  margin:40px;
   width:80%; 
   
 }
 
-footer > img {
+footer > .add_info >img {
   display:inline-block;
   position:absolute;
-  top:60px; right:0px;
-}
-footer > .add_info{   padding:20px; font-weight:800; }
-
-
-footer > .address{ 
- padding:20px;
+  top:40px;  
 }
 
+footer > .add_info > span { padding:20px; font-weight:800; }
+
+
+footer > .add_info > .address {padding:20px; }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*------ slider------*/
-
-
-  .dark{  
-    display:none; 
-    position:fixed;
-    background:rgba(0,0,0,0.8); 
-    inset:0px;
-    z-index:101; }
-
-
-  .gnb {
-    position:fixed; top:0; left:0; bottom:0;
-    width:304px; background:white; z-index:102;
-    transform: translateX(-100%);
-    transition:all 0.3s ease-in;}
-
-  .gnb .inner {
-    height:100%; width: 304px; border: 2px solid red;
-    overflow-y:auto;}
-
-  .info_user{
-    display: flex; justify-content: space-between;
-    padding: 30px 24px;}
-  .info_user .login{ font-size: 16px; font-weight:700;}
-  .ico_arrow_right{
-      display:inline-block;
-      width:16px; height:16px;
-      background-position:-320px 0;
-      vertical-align:middle; }
-
-
-  .list_menu { padding: 16px 0; }
-  .list_menu li{ }
-  .list_menu li > a{
-    display:block; line-height:48px;
-    font-size:16px; padding:0 24px;
-   }
-
-  .ico_arrow_down{
-    float:right;
-    width:16px; height:16px;
-    background-position:-360px 0;
-    margin-top:15px;
-  }
-
-  .ico_arrow_down.on{ background-position:-340px 0;  }
-
-
-  .list_sub{ height:0; text-align:center; overflow:hidden; 
-  transition: 0.3s ease-in;}
-
-
-  .box_banner{ padding: 0 16px;}
-  .box_banner img{ width:100%; border-radius:16px;}
-
-
-  .link_login{ 
-    display:block; text-align:center;
-    padding:32px 0;
-    border-top: 1px solid #ddd; margin-top:16px;}
-
-  .ico_lock{
-    display:inline-block;
-    width:24px; height:24px;
-    background-position:-560px -20px;
-    vertical-align:middle; }
-
-
-  .line{ 
-    border-bottom:1px solid #ddd;
-    padding-bottom:16px;
-    margin-bottom:16px;}
-
-
-
-  .loginPop { 
-    display: none;
-    position:absolute; 
-    top:50%; left:50%; transform:translate(-50%,-50%); 
-    width:310px; 
-    text-align: center;
-    z-index:200;
-    background: #fff; 
-    border-radius: 16px; 
-    padding: 45px; 
-  }
-    
-  .loginPop img { width:128px;}
-  .loginPop strong { 
-    display: block; font-size:18px; font-weight:700;
-    margin-bottom: 6px;}
-  .loginPop p {font-size:16px; }
-  
-  .loginPop button{}
-  
-  .loginPop button.talk_btn { 
-    width:100%; background:#fee500;
-    border-radius:999px;
-    padding:10px 0; margin-top:20px;}
-    
-  
-
-  .ico_talk{
-    display:inline-block;
-    width: 24px; height: 24px;
-    background-position:-480px -20px; 
-    vertical-align: middle;}
-    
-  .loginPop button.close { position: absolute; top:16px; right:16px; width:24px; height: 24px;  }
-
-  .ico_close { 
-   width:24px; height: 24px;
-    display: block; font-size:1px;
-    color: transparent; line-height:0; 
-    background: url('../img/ico_close.png') no-repeat center center / contain}

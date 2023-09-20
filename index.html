@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
 
-  <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script defer src="js/js.js"></script>
 
 </head>
@@ -21,20 +21,18 @@
 
 <body>
   <div id="container">
-    
+    <div>
     <header> <!--  상단 fix  -->
-      <div class="top_left">
+      <div class="header_left">
         <i class="fa-solid fa-bars"></i>
       </div>
-      <div class="top_center">
+      <div class="header_center">
         <a href="index.html"></a>
         <img src="img/title_img.png">
       </div>
-      <div class="top_right">
-       
-
-      <div class="login">
-        <i class="fa-regular fa-user"></i></div> 
+        <div class="header_right">
+          <i class="fa-regular fa-user"></i>
+        </div> 
        </div>
     </header>
 
@@ -58,30 +56,34 @@
       </form>
        </div>
 
-
+<!-------------  button ---------->
        <section class="content">
-        <div>
+        <div class="pre_up">
           <img src="img/pre.png" alt=""> 
           <span>조기접수</span>
         </div>
         
-
-        <div>
+        <div class="info_up">
           <img src="img/check.png" alt="">
-          <div class="info_up">원서접수</div>
+          <span>원서접수</span>
         </div>
         
-        <div>
+        <div class="info_down">
           <img src="img/calendar.png" alt=""> 
-          <div class="info_down">
-            합격자 / 답안 발표</div>
+          <span>합격자 / 답안 발표</span>
         </div>
         
-        <div>
+        <div class="info_down">
         <img src="img/certification.png" alt=""> 
-          <div class="info_down">자격증 신청 및 발급</div>
+          <span>자격증 신청 및 발급</span>
         </div>
       </section>
+
+
+      <div class="search_ad">
+        <img src="img/sil2.png">
+      </div>
+
 
 
      
@@ -165,7 +167,7 @@
         </span>
       </div>
       <div class="visual">
-        <img src="img/ad1.jpg">
+        <img src="img/caric.png">
       </div>
       
     </div>
@@ -177,9 +179,9 @@
 
 <!------  footer ----->
   <footer>
-    <span class="add_info">
-      [국가기술자격 응시자격서류 제출 주소 등 안내] </span>
-    <img src="img/footer_logo.gif">
+    <div class="add_info">
+      <span>[국가기술자격 응시자격서류 제출 주소 등 안내] </span>
+      <img src="img/footer_logo.gif">
       <div class="address">
         <span>
           <p>(우)44538</p>울산광역시 중구 종가로 345 한국산업인력공단 </span>
@@ -187,89 +189,11 @@
         <br>
          <span>Copyright ⓒ 1999~2015 All Rights Reserved. 
           <p>Human Resources Development Service of Korea.</p></span>
+         </div>
       </div> 
-  </footer>
-</div>
+     </footer>
+   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<!--------- Side ------->
-  <div class="dark"></div>
-
-  <div class="gnb">
-    <div class="inner">
-      <div class="info_user">
-        <a href="#" class="login log"><u> </u></a>
-        <a href="#" class="nonMember">
-        <span class="ico_friends ico_arrow_right"></span></a>
-      </div>
-      <ul class="list_menu">
-        <li><a href="#" class="log">시험일정</a></li>
-        <li class="line"><a href="#" class="log">원서접수</a></li>
-        <li>
-          <a href="#" class="btn_sub">합격자/답안발표
-            <span class="ico_friends ico_arrow_down">더보기</span>
-          </a>
-          <div class="list_sub">
-            <br>
-            <br>
-            <br>
-          </div>
-          </li>
-        <li class="line">
-          <a href="#"class="btn_sub">자격증,확인서
-          <span class="ico_friends ico_arrow_down"></span>
-          </a>
-          <div class="list_sub">
-            자격증 확인서<br>
-            자격증 조회<br>
-            자격증 발급신청<br>
-            <br>
-            <br>
-            <br>
-          </div>
-        </li>
-        <li>
-          <a href="#">마이페이지</a>
-        </li>
-        <li class="line">
-          <a href="#">공지사항</a>
-        </li>
-        <li>
-          <a href="#">이용안내</a>
-        </li>
-
-      </ul>
-      <div class="box_banner">
-        <a href="#"><img src="img/banner.png" alt="">
-         </a>
-        </div>
-       </div>
-  </div>
-
-
-  <div class="loginPop">
-    <img src="img/img_apeach.png" alt="">
-    <strong>앗! 로그인</strong>
-    <p></p>
-    <button class="talk_btn">
-      <span class="ico_friends ico_talk"></span>로그인하기
-    </button>
-    <button class="close">
-      <span class="ico_close"></span>
-    </button>
-
-  </div>
 
 </body>
 </html>
