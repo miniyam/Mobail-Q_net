@@ -4,9 +4,6 @@
 /*====== body =======*/
 
 body {
- width:100%;
- min-width:340px;
-
 font-family: 'Noto Sans KR', sans-serif;
 font-size: 14px; line-height: 1.5; color:black;
 cursor:pointer;}
@@ -14,13 +11,13 @@ cursor:pointer;}
 #container {
   overflow:hidden; 
   /* border: 2px solid rgba(0,0,0,0.4);*/
-  width:100%;
+  width:636px;
   max-width:540px; 
-  min-width:340px; 
+  min-width:320px; 
   margin:auto; }
 
 
-main{ width:100%; padding-top:96px;}
+main{ width:100%; padding-top:96px; height:2000px;}
 
 header{ 
   position:fixed; 
