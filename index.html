@@ -12,8 +12,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
+  <link rel="stylesheet" href="index2.html">
 
-  <script defer src="js/js.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
+  <script src="js/js.js"></script>
 
 </head>
 
@@ -58,22 +63,24 @@
 
 <!-------------  button ---------->
        <section class="content">
-        <div class="pre_up">
+        <div class="content_box">
           <img src="img/pre.png" alt=""> 
           <div>조기접수</div>
         </div>
         
-        <div class="info_up">
+        <div class="content_box">
           <img src="img/check.png" alt="">
           <div>원서접수</div>
         </div>
         
-        <div class="info_down">
-          <img src="img/calendar.png" alt=""> 
-          <div>합격자 / 답안 발표</div>
+        <div class="content_box"> 
+         
+            <img src="img/calendar.png" alt=""> 
+            <div>합격자 / 답안 발표</div>
+            <a href="index2.html"></a>
         </div>
         
-        <div class="info_down">
+        <div class="content_box">
           <img src="img/certification.png" alt=""> 
           <div>자격증 신청 및 발급</div>
         </div>
@@ -83,42 +90,57 @@
 
 <!-------------  slid   ---------->
 
-      <div class="slide">
-        <img src="img/sil2.png">
-      </div>
 
 
-<!-------------  apple - 원서 접수중인 시험  ---------->
+      <swiper-container class="mySwiper" 
+      pagination="true" 
+      pagination-clickable="true" 
+      navigation="true" 
+      space-between="30"
+      centered-slides="true" 
+      autoplay-delay="2500" 
+      autoplay-disable-on-interaction="false">
+
+      <swiper-slide><img src="img/sil1.png"></swiper-slide>
+      <swiper-slide><img src="img/sil2.png"></swiper-slide>
+      <swiper-slide> <img src="img/ad1.jpg"></swiper-slide>
+      <swiper-slide><img src="img/ad1.png"></swiper-slide>
+
+    </swiper-container>
+
+
+<!--------- 원서 접수중인 시험  ---------->
 
      
-      <div class="apply">
+      <div class="apply_wrap">
         <div class="apply_tap">
            <span> 원서 접수 중인 시험</span>
            <button><a href="#">
-           상시 시험</a></button>
-        </div>
-           
-           
-        <ul>
-          <li>
-            <a href="#">
-              <p class="title">2023년 제 23회 국내여행안내사 1,2차 동시</p>
-              <p class="day"> 접수 :2023. 09. 18~2023. 09. 22</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-                <p class="title">2023년 제 25회 경비지도사 1,2차 동시</p>
+           상시 시험</a>
+           </button>
+        </div> 
+        <div class="apply_list"> 
+         <ul>
+            <li>
+              <a href="#">
+                <p class="title">2023년 제 23회 국내여행안내사 1,2차 동시</p>
                 <p class="day"> 접수 :2023. 09. 18~2023. 09. 22</p>
               </a>
             </li>
-          <li>
-            <a href="#">
-              <p class="title">2023년 제 23회 호텔관리사 1,2차 동시</p>
-              <p class="day"> 접수 :2023. 09. 18~2023. 09. 22</p>
-            </a>
-          </li>
-        </ul>
+            <li>
+              <a href="#">
+                  <p class="title">2023년 제 25회 경비지도사 1,2차 동시</p>
+                  <p class="day"> 접수 :2023. 09. 18~2023. 09. 22</p>
+                </a>
+              </li>
+            <li>
+              <a href="#">
+                <p class="title">2023년 제 23회 호텔관리사 1,2차 동시</p>
+                <p class="day"> 접수 :2023. 09. 18~2023. 09. 22</p>
+              </a>
+            </li>
+         </ul>
+      </div> 
       </div>
         
 
@@ -164,15 +186,15 @@
     <div class= "client">      
       <div class="call">
         <img src="img/call.png">
-         <p>고객지원</p>
+         <span>고객지원</span>
          <span class="call_num">
-          <p>1644 - <font color="blue">
-            8000</font></p>
+          <p>1644 - 8000</p>
         </span>
+        <span>
+          평일  09:00 ~ 18:00<br>
+          휴일 - 토,일요일 및 공휴일</span>
       </div>
-      <div class="visual">
-        <img src="img/caric.png">
-      </div>
+   
       
     </div>
 
@@ -184,11 +206,11 @@
 <!------  footer ----->
   <footer>
     <div class="add_info">
-      <span>[국가기술자격 응시자격서류 제출 주소 등 안내] </span>
-      <img src="img/footer_logo.gif">
+      <span>
+        [국가기술자격 응시자격서류 제출 주소 등 안내] </span>
       <div class="address">
         <span>
-          <p>(우)44538</p>울산광역시 중구 종가로 345 한국산업인력공단 </span>
+          (우)44538울산광역시 중구 종가로 345 한국산업인력공단 </span>
         <br>
         <br>
          <span>Copyright ⓒ 1999~2015 All Rights Reserved. 

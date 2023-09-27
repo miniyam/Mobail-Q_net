@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결과확인</title>
+
+    <style>
+
+        body > div { 
+            width:300px; 
+            margin:auto;
+            padding:20px; }
+        body > div > h1 { text-align: center; font-weight: 700;}
+        body > div > p { margin-bottom:40px;}
+     
+        #p1{ font-size: 20px; margin-bottom:40px; font-weight:400;padding-bottom:40px;}
+        #p2{ border:1px solid rgba(0,0,0,.2);
+             border-radius:10px; 
+             color:#ff0000; 
+             line-height:50px;
+             text-align:center; 
+             font-size: 18px;
+             font-weight: 700;}
+ 
+        
+    </style>
+</head>
+
+<body>
+ <div>
+    <h1>합격확인</h1>
+    <P id="p1">이름</P>
+    <P id="p2">수험번호</P>
+</div>   
+    
+        <script>
+            let id = prompt ('이름를 입력해주세요','');
+            let pw = prompt ('수험번호를 입력해주세요(숫자만 입력해주세요)','');
+            const elP1 = document.querySelector('#p1');
+            const elP2 = document.querySelector('#p2');
+            let msg;
+
+        
+            if (id=='한민희' && pw == '12345678'){
+                msg = '합격을 축하드립니다'
+            } else if (id=='한민희' || pw == '12345678'){
+                msg = '합격자 명단에 없습니다'
+            }
+        
+            
+            elP1.innerHTML = `이름 : ${id} <br>
+            <br> 수험번호 : ${pw}`;
+            elP2.innerHTML = msg;
+        </script>
+    </body>
+</html>
+
+<!--
+    조건문  Conditional Statement
+     
+    if(조건) { 조건 충족시 실행구 };
+    if(조건) { 조건 충족시 실행구 } else { 조건 충족 X 실행구 };
+    
+    if(조건1){
+        조건1 충족시 실행구
+    } else if(조건1){
+        조건2 충족시 실행구
+    } ...
+      else {
+        앞의 모든 조건X 실행구
+      }
+
+-->
